@@ -1,6 +1,9 @@
-﻿namespace RestaurantWebApplication.Models
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace RestaurantWebApplication.Models
 {
-    public class ApplicationUser
+    public class ApplicationUser : IdentityUser
     {
+        public ICollection<Order>? Orders { get; set; }
     }
 }
